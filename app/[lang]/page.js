@@ -8,7 +8,6 @@ export default async function Home() {
     `https://multi-language-photofeeds.vercel.app/api/photos`,
   );
   const photos = await response.json();
-  console.log(photos);
 
   return <PhotoList photos={photos} />;
 }
