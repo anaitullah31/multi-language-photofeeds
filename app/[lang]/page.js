@@ -4,8 +4,11 @@ import PhotoList from "../components/PhotoList";
 import { getBaseUrl } from "@/app/lib/getBaseUrl";
 
 export default async function Home() {
-  const response = await fetch(`multi-language-photofeeds.vercel.app/api/photos`);
+  const response = await fetch(
+    `https://multi-language-photofeeds.vercel.app/api/photos`,
+  );
   const photos = await response.json();
+  console.log(photos);
 
   return <PhotoList photos={photos} />;
 }
